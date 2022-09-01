@@ -1,0 +1,23 @@
+spring:
+  application:
+      name: eshop-user
+
+  jpa:
+    properties:
+      hibernate.default_schema: public
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgresPlusDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/eshop?currentSchema=public,stringtype=unspecified
+    username: postgres
+    password: postgres
+    hikari:
+      initialization-fail-timeout: 0
+
+server:
+  port: 8001
