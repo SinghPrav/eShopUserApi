@@ -1,0 +1,1 @@
+INSERT INTO user_info VALUES (1, "First");
